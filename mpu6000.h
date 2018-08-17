@@ -81,6 +81,8 @@ void mpuRunCalib(unsigned int discard, unsigned int count);
 void mpuSetSleep(unsigned char mode);
 
 // 3 ints
+void mpuGetOffset(int* buff);
+// 3 ints
 void mpuGetGyro(int* buff);
 // 3 ints
 void mpuGetXl(int* buff);

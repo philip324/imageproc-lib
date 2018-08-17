@@ -174,6 +174,13 @@ void mpuSetSleep(unsigned char mode) {
 
 }
 
+void mpuGetOffset(int* buff) {    
+    waitDmaFinish();
+    buff[0] = mpu_params.gyro_offset[0];
+    buff[1] = mpu_params.gyro_offset[1];
+    buff[2] = mpu_params.gyro_offset[2];
+ }
+
 void mpuGetGyro(int* buff) {
     waitDmaFinish();
     buff[0] = mpu_data.gyro_data[0] + mpu_params.gyro_offset[0];
